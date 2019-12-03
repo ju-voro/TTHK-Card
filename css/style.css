@@ -1,0 +1,115 @@
+:root {
+    --tthk-red: #8F334C;
+    --tthk-red-alpha: rgba(143, 51, 76, 0.287);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landing {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #777;
+}
+
+.landing-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 8rem;
+    
+}
+
+.landing img {
+    margin: 5rem;
+}
+
+.landing h1 {
+    font-size: 5rem;
+    font-family: 'Great Vibes', cursive;
+}
+
+.landing h2 {
+    font-family: Arial;
+    margin-top: 2rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    align-items: center;
+    text-align: center;
+}
+
+.countdown div {
+    font-family: Arial;
+
+    padding: 0.6rem;
+    border: 3px solid var(--tthk-red);
+    border-radius: 5px;
+    margin: 5px;
+    opacity: 0.7;
+   
+}
+
+.countdown span {
+    font-size: 1.6rem;
+}
+
+.glow {
+    color: rgba(119, 119, 119, 0.692);
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--tthk-red-alpha), 0 0 40px var(--tthk-red-alpha), 0 0 50px var(--tthk-red-alpha), 0 0 60px var(--tthk-red-alpha), 0 0 70px var(--tthk-red-alpha);
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px var(--tthk-red-alpha), 0 0 40px --tthk-red-alpha, 0 0 50px var(--tthk-red-alpha), 0 0 60px var(--tthk-red-alpha), 0 0 70px var(--tthk-red-alpha), 0 0 80px var(--tthk-red-alpha);
+    }
+
+  }
+
+  @media(max-width: 568px){
+    
+    .landing img {
+        margin: 1rem;
+        width: 75%;
+    }
+    .landing h1{
+      font-size: 1.6rem;
+      margin: 0 1rem;
+    }
+  
+    .landing h2{
+        font-size: 1.3rem;
+        margin-top: 1rem;
+      }
+
+    .countdown {
+      margin: 1rem;
+      font-size: 1rem;
+      flex-direction: column;
+    }
+    .countdown div {
+       
+        font-size: 1rem;
+      }
+    
+  }
